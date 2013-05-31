@@ -1,0 +1,269 @@
+\documentclass{article}
+%\documentclass[preprint,nocopyrightspace]{sigplanconf}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{reames}
+
+\newtheorem{thm}{Theorem}
+\theoremstyle{remark}
+\newtheorem{ex}{Example}
+
+\lstset
+	{tabsize=4,
+	 columns=flexible,
+	 showstringspaces=false,
+	 numbers=left,
+	 numberstyle=\tiny,
+	 stepnumber=1,
+	 numbersep=5pt,
+	 mathescape=true,
+	 basicstyle=\ttfamily}
+
+\def\DesignChoice{Design Choice}
+\theoremstyle{remark}
+\newtheorem{design-choice}{\DesignChoice}
+
+\begin{document}
+
+%\title{Title goes here}
+%\author{Philip Reames}%{University of California, Berkeley}{reames@cs.berkeley.edu}
+%\authorinfo{Philip Reames}{University of California, Berkeley}{\{reames\}@cs.berkeley.edu}
+%\maketitle
+
+%% \begin{abstract}
+%% \end{abstract}
+
+ %\section{Introduction}
+
+%% \subsection{}
+
+%% \section{Related Work}
+
+
+\section{SPEC}
+
+1P Laptop
+
+\begin{samepage}
+%%\begin{center}
+\input{generated/spec-laptop-1p-time-table}
+
+\input{generated/spec-laptop-1p-mem-table}
+%%\end{center}
+\end{samepage}
+
+
+\pagebreak
+\begin{samepage}
+4P Laptop
+
+\input{generated/spec-laptop-4p-time-table}
+
+\input{generated/spec-laptop-4p-mem-table}
+
+\input{generated/spec-laptop-4p-mem-graph}
+
+\end{samepage}
+
+\pagebreak
+
+\begin{samepage}
+4P Emerald
+
+\input{generated/spec-emerald-4p-time-table}
+
+\input{generated/spec-emerald-4p-mem-table}
+\end{samepage}
+
+\pagebreak
+
+\begin{samepage}
+16P Emerald
+
+\input{generated/spec-emerald-16p-time-table}
+
+\input{generated/spec-emerald-16p-mem-table}
+\end{samepage}
+
+\pagebreak
+
+\begin{samepage}
+4P Gainestown
+
+\input{generated/spec-gainestown-4p-time-table}
+
+\input{generated/spec-gainestown-4p-mem-table}
+\end{samepage}
+\pagebreak
+
+\begin{samepage}
+16P Gainestown
+
+\input{generated/spec-gainestown-16p-time-table}
+
+\input{generated/spec-gainestown-16p-mem-table}
+\end{samepage}
+\pagebreak
+
+\begin{samepage}
+Emerald 16P Before LB
+
+\input{generated/spec-emerald-16p-time-table-before-lb}
+\end{samepage}
+%\begin{table*}
+%\input{generated/spec-emerald-16p-mem-table}
+%\end{table*}
+
+CPU Scalability Laptop
+\input{generated/scale-cpu-laptop}
+
+CPU Scalability Laptop (capped)
+\input{generated/scale-cpu-laptop-capped}
+
+CPU Scalability Gainestown (UMA)
+\input{generated/scale-cpu-gainestown}
+
+CPU Scalability Gainestown (UMA) - capped
+\input{generated/scale-cpu-gainestown-capped}
+
+CPU Scalability Emerald (NUMA)
+\input{generated/scale-cpu-emerald}
+
+CPU Scalability Emerald (NUMA) - capped
+\input{generated/scale-cpu-emerald-capped}
+
+\pagebreak
+
+\section{Micro + Other Results}
+
+\begin{table*}
+%\begin{center}
+1P Opts
+
+\input{generated/micro-table-laptop-1p-basic.tex}
+
+1P Opts
+
+\input{generated/micro-table-laptop-1p-opts.tex}
+
+4P Basic
+
+\input{generated/micro-table-laptop-4p-basic.tex}
+%\end{center}
+\end{table*}
+
+\pagebreak
+\input{generated/micro-compare-table-laptop-1p-4p}
+\pagebreak
+
+\begin{table*}
+%\begin{center}
+Emerald 4P Basic
+
+\input{generated/micro-table-emerald-4p-basic.tex}
+
+Emerald 8P Basic
+
+\input{generated/micro-table-emerald-8p-basic.tex}
+\end{table*}
+
+\begin{table*}
+
+Emerald 16P Basic
+
+\input{generated/micro-table-emerald-16p-basic.tex}
+
+Emerald 32P Basic
+
+\input{generated/micro-table-emerald-32p-basic.tex}
+
+Emerald 64P Basic
+
+\input{generated/micro-table-emerald-64p-basic.tex}
+\end{table*}
+
+\begin{figure*}
+\noindent\input{generated/clang-time-table.tex}
+\end{figure*}
+%\input{graph.tex}
+%% \input{generated/pause_dist.tex}
+%% \input{generated/frac_free.tex}
+%% \input{generated/frac_free2.tex}
+
+%% \input{generated/plot_2d_1.tex}
+%% \input{generated/plot_2d_2.tex}
+%% \input{generated/plot_2d_3.tex}
+%% \input{generated/plot_2d_4.tex}
+%% \input{generated/plot_2d_5.tex}
+%% \input{generated/plot_2d_6.tex}
+
+%% \input{generated/plot_3d_1.tex}
+\begin{figure*}
+10\%
+\input{generated/scale-graph-laptop-1p-10perc}
+
+25\%
+\input{generated/scale-graph-laptop-1p-25perc}
+
+50\%
+\input{generated/scale-graph-laptop-1p-50perc}
+\end{figure*}
+
+
+\begin{figure*}
+Gainestown 10\%
+\input{generated/scale-size-gainestown-4p-10perc}
+
+25\%
+\input{generated/scale-size-gainestown-4p-25perc}
+
+75\%
+\input{generated/scale-size-gainestown-4p-75perc}
+
+90\%
+\input{generated/scale-size-gainestown-4p-90perc}
+\end{figure*}
+
+\begin{figure*}
+Emerald 10\%
+\input{generated/scale-size-emerald-4p-10perc}
+
+25\%
+\input{generated/scale-size-emerald-4p-25perc}
+
+75\%
+\input{generated/scale-size-emerald-4p-75perc}
+
+90\%
+\input{generated/scale-size-emerald-4p-90perc}
+\end{figure*}
+
+
+
+\begin{table*}
+%\begin{center}
+Gainestown 4P Basic
+
+\input{generated/micro-table-gainestown-4p-basic.tex}
+
+Gainestown 8P Basic
+
+\input{generated/micro-table-gainestown-8p-basic.tex}
+
+Gainestown 16P Basic
+
+\input{generated/micro-table-gainestown-16p-basic.tex}
+
+Gainestown 32P Basic
+
+\input{generated/micro-table-gainestown-32p-basic.tex}
+\end{table*}
+
+%% \cite{JavaSpec}
+
+%% \bibliographystyle{abbrvnat}
+%% \bibliography{references}
+
+\end{document}

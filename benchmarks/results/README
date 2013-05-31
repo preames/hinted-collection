@@ -1,0 +1,10 @@
+Most of the sub-directories are reasonable named.  Here are some hints for the others.
+
+
+spec-pf/spec-test-pf - these two are the spec results from the submitted paper (i.e. serial)
+
+spec-pf-parallel/spec-test-pf-parallel - these are the spec results from the parallel code on April 12th.  Note: There's some remaining weirdness with instablity of runtimes in the baseline collector for the microbenchmarks.  (NOT USED)
+
+spec-pf-parallel-scrap - combined results from previous parallel test, and ref runs.  I forgot to clear files before hand - oops.
+
+clang_build* - from a full build of clang with an instrumented (via PRELOAD) version of the clang driver, the clang compiler, and LD.  The _stats.csv file is from various test runs (don't use). The release+asserts run is to show the entire run completed with assertions enabled (not stats.)  The -release versions are an exclusively GC and HINTGC version respectively.  Note that the GC numbers are not going to exactly line up.  The distributions should be compable, but not the individual data points.

@@ -1,0 +1,2 @@
+handle SIGXCPU noprint
+handle SIGPWR noprint

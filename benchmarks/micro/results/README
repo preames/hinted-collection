@@ -1,0 +1,6 @@
+Note: The named sub-directories and machine named files are the more recent results.  The others are dated.
+
+
+baseline.csv -- from right after the parlab retreat.  They include the micro benchmark runs up to 2048.  Note: These were using an old version of the code - without mark stack overflow handling - but _should_ still be correct.
+
+micro-run?.* -- from millenium machine (emerald) using the eval.py script.  Split into two sets due to connection timeout.  Only have log for the first portion since I forgot to tee the second.  (Total running time: around 24 hours) (micro-run-merge.csv is the combined file with duplicates (due to crash) manually removed.)
